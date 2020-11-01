@@ -5,6 +5,9 @@ function BucketSort(array :  Array<number>, lowerRange : number, upperRange : nu
     let range : number = upperRange - lowerRange;
     let count :  Array<number> = new Array<number>(range);
     for(i = 0; i < size; i++) {
+        count[i] = 0;
+    }
+    for(i = 0; i < size; i++) {
         count[array[i] - lowerRange]++;
     }
     j = 0;
